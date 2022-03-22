@@ -136,3 +136,32 @@ ul {
     height: 77px;
   }
 }
+
+/* download section */
+#download-section {
+  background-color: red;
+  display: flex;
+  justify-content: center;
+}
+
+#download-container {
+  background-color: blue;
+  max-width: 788px;
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+#download-info {
+  background-color: aqua;
+  width: 50%;
+}
+
+#download-banner {
+  background-color: yellow;
+  width: 41%;
+}
+
+#download-banner img {
+  height: 500px;
+}
