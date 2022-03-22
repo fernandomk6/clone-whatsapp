@@ -1,0 +1,138 @@
+/* general */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+/* utils */
+.hide {
+  display: none;
+}
+
+/* variables */
+:root{
+  --bg-color: #fff;
+  --header-bg-color: #128c7e;
+  --footer-bg-color: #273443;
+  --black-color: #1c1e21;
+  --gray-color: #5E5E5E;
+  --white-color: #fff;
+  --link-color: #39b3ed;
+}
+
+/* header */
+#main-header {
+  background-color: var(--header-bg-color);
+  color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  padding: 26px;
+}
+
+#main-header #header-container {
+  flex: 1 1 auto;
+  max-width: 1050px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#main-logo-container {
+  flex: 1 1 auto;
+}
+
+#main-header #header-container #main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 1 auto;
+  text-transform: uppercase;
+}
+
+#main-header #header-container #main-nav ul {
+  display: flex;
+  justify-content: space-around;
+  flex: 1 1 auto;
+}
+
+#main-header #header-container #main-nav ul li {
+  padding: 5px;
+}
+
+#main-header #header-container #main-nav .language {
+  display: flex;
+  align-items: center;
+}
+
+#main-header #header-container #main-nav .language .material-icons-outlined {
+  margin: 0 5px;
+  font-size: 20px;
+}
+
+#main-header #header-container #main-nav .language .tri-below {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid var(--white-color);
+  margin: 0 5px;
+}
+
+/* responsivo header  */
+@media (max-width: 1025px) {
+  #main-header {
+    font-size: .8rem;
+    padding: 20px 26px;
+  }
+
+  #main-logo {
+    display: none;
+  }
+
+  #main-logo-icon {
+    display: block;
+    padding: 0 5px;
+  }
+
+  #main-logo-container {
+    flex: 1 1 auto;
+  }
+
+  #main-header #header-container #main-nav .language #selected-language,
+  #main-header #header-container #main-nav .language .tri-below {
+    display: none;
+  }
+
+}
+
+@media (max-width: 767px) {
+  #main-header #header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  #main-header #header-container #main-nav {
+    display: none;
+  }
+
+  #menu-ham{
+    display: block;
+    align-self: flex-end;
+  }
+
+  #menu-ham span{
+    font-size: 2rem;
+  }
+
+  #main-logo-icon {
+    height: 77px;
+  }
+}
