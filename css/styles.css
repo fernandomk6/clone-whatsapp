@@ -20,6 +20,7 @@ ul {
   --bg-color: #fff;
   --header-bg-color: #128c7e;
   --footer-bg-color: #273443;
+  --dark-green: #075e54;
   --black-color: #1c1e21;
   --gray-color: #5E5E5E;
   --white-color: #fff;
@@ -33,6 +34,9 @@ ul {
   display: flex;
   justify-content: center;
   padding: 26px;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 #main-header #header-container {
@@ -112,6 +116,9 @@ ul {
 }
 
 @media (max-width: 767px) {
+  #main-header {
+    position: relative;
+  }
   #main-header #header-container {
     display: flex;
     flex-direction: column;
@@ -139,13 +146,12 @@ ul {
 
 /* download section */
 #download-section {
-  background-color: red;
   display: flex;
   justify-content: center;
+  padding: 140px 80px 40px 80px;
 }
 
 #download-container {
-  background-color: blue;
   max-width: 788px;
   flex: 1 1 auto;
   display: flex;
@@ -153,15 +159,137 @@ ul {
 }
 
 #download-info {
-  background-color: aqua;
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  line-height: 45px;
+  padding-bottom: 40px;
+}
+
+.title h2, h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.description {
+  line-height: 25px;
+  padding-bottom: 30px
+}
+
+.description p {
+  font-size: 1.1rem;
+}
+
+.extra-info {
+  padding-bottom: 30px
+}
+
+.extra-info p {
+  color: var(--gray-color);
+}
+
+#download-list li{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  color: var(--header-bg-color);
+  font-size: 1.1rem;
+}
+
+#download-list li .material-icons-outlined{
+  padding-right: 15px;
 }
 
 #download-banner {
-  background-color: yellow;
   width: 41%;
 }
 
 #download-banner img {
-  height: 500px;
+  width: 100%;
+}
+
+.btn-container {
+  text-align: center;
+}
+
+.btn-main {
+  background-color: var(--dark-green);
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  margin-bottom: 40px;
+}
+
+.btn-main a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: 1rem;
+}
+
+/* download responsive  */
+
+@media (max-width: 767px) {
+  #download-section {
+    background-color: var(--header-bg-color);
+    color: var(--white-color);
+    padding: 40px 25px 0 25px;
+  }
+
+  #download-container {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  #download-info,
+  #download-banner {
+    width: auto;
+  } 
+
+  #download-banner {
+    display: flex;
+    justify-content: center;
+  }
+
+  #download-banner-responsive-container {
+    max-width: 300px;
+  }
+
+  .extra-info {
+    display: none;
+  }
+
+  #download-list {
+    display: none;
+  }
+
+  .title {
+    padding-bottom: 20px;
+    line-height: 35px;
+  }
+
+  .title h2{
+    font-size: 1.5rem;
+  }
+
+  .description p{
+    font-size: 1rem;
+  }
+
+  #download-btn.btn-container {
+    display: block;
+  }
+
+  #download-banner-responsive-img {
+    display: block;
+  }
+
+  #download-banner-main-img {
+    display: none;
+  }
 }
