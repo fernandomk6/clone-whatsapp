@@ -173,6 +173,7 @@ ul {
 .title h2, h1 {
   font-size: 2rem;
   font-weight: 400;
+  color: var(--black-color);
 }
 
 .description {
@@ -182,6 +183,7 @@ ul {
 
 .description p {
   font-size: 1.1rem;
+  color: var(--black-color)
 }
 
 .extra-info {
@@ -216,7 +218,7 @@ ul {
   text-align: center;
 }
 
-.btn-main {
+.btn-container .btn-main {
   background-color: var(--dark-green);
   padding: 15px 30px;
   border-radius: 30px;
@@ -224,7 +226,7 @@ ul {
   margin-bottom: 40px;
 }
 
-.btn-main a {
+.btn-container .btn-main a {
   text-transform: uppercase;
   text-decoration: none;
   color: var(--white-color);
@@ -273,12 +275,14 @@ ul {
     line-height: 35px;
   }
 
-  .title h2{
+  #download-section .title h2{
     font-size: 1.5rem;
+    color: var(--white-color);
   }
 
-  .description p{
+  #download-section .description p{
     font-size: 1rem;
+    color: var(--white-color);
   }
 
   #download-btn.btn-container {
@@ -292,4 +296,210 @@ ul {
   #download-banner-main-img {
     display: none;
   }
+}
+
+/* busines section */
+#whastapp-business-section {
+  display: flex;
+  justify-content: center;
+}
+
+#whastapp-business-section a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+#whatsapp-busines-container {
+  max-width: 1450px;
+  display: flex;
+}
+
+#whatsapp-busines-content {
+  background-color: #D8E8EA;
+  flex: 1 1 0;
+  margin-right: 20px;
+  padding: 0 40px;
+}
+
+#security-info-content {
+  background-color: #E7F0E4;
+  flex: 1 1 0;
+  margin-left: 20px;
+  padding: 0 40px;
+}
+
+#whatsapp-busines-content .title h1,
+#security-info-content .title h2 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.1rem;
+}
+
+#whatsapp-busines-content .title h1 {
+  margin-top: 80px;
+}
+
+#whatsapp-busines-content .description,
+#security-info-content .description {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+
+#whatsapp-busines-content img {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.cryptography-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.criptography-animation {
+  width: 350px;
+  height: 350px;
+  background-color: #77d7c8;
+  border-radius: 50%;
+  margin-top: 80px;
+}
+
+.cryptography-container span {
+  text-transform: uppercase;
+  margin: 40px 0 20px 0;
+  color: var(--gray-color);
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* business responsive */
+@media (max-width: 767px) {
+  #whatsapp-busines-container {
+    flex-direction: column;
+  }
+
+  #whatsapp-busines-content,
+  #security-info-content {
+    margin: 0;
+  }
+
+  #whatsapp-busines-content img {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  #whatsapp-busines-content .title h1,
+  #security-info-content .title h1 {
+    font-size: 1.7rem;
+  }
+
+  #whatsapp-busines-content .description p,
+  #security-info-content .description p {
+    font-size: 1rem;
+  }
+
+  .criptography-animation {
+    width: 300px;
+    height: 300px;
+  }
+
+}
+
+@media (max-width: 400px) {
+  
+  .criptography-animation {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* button section */
+#show-resources {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+#show-resources .btn-main {
+  background-color: var(--bg-color);
+  color: var(--dark-green);
+  border: 1px solid var(--link-color);
+}
+
+#show-resources .btn-main a {
+  color: var(--dark-green);
+}
+
+/* footer */
+#main-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--footer-bg-color);
+}
+
+.footer-menu {
+  width: 90%;
+  flex: 1 1 auto;
+  max-width: 1100px;
+  display: flex;
+  padding: 40px;
+}
+
+.footer-menu ul {
+  flex: 1 1 0;
+  margin-bottom: 20px;
+}
+
+.footer-menu ul li {
+  margin-bottom: 5px;
+  color: var(--white-color);
+  font-size: 1.1rem;
+}
+
+.footer-menu ul p {
+  color: var(--white-color);
+  font-size: 1.1rem;
+}
+
+.list-title {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* footer responsivo */
+@media (max-width: 767px) {
+  .footer-menu {
+    flex-direction: column;
+  }
+}
+
+/* footer copy */
+.footer-copy {
+  background-color: var(--black-color);
+  align-self: stretch;
+  display: flex;
+  justify-content: space-around;
+  color: var(--white-color);
+  flex-wrap: wrap;
+  padding: 20px 40px;
+}
+
+.copy {
+  margin: 20px;
+}
+
+.privacity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
 }

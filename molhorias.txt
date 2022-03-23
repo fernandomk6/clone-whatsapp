@@ -1,0 +1,9 @@
+melhorar nomeclatura
+criar classes reaproveitaveis
+
+replicar classe text container
+replicar classe img container
+
+unir responsivos
+
+sessao busines por paddind no container e não nos titulos e paragrafos
